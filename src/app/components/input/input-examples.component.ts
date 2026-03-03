@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import {
   GoabContainer,
@@ -10,9 +16,14 @@ import {
   GoabButtonGroup,
   GoabBlock,
   GoabCard,
-  GoabFormItem
+  GoabFormItem,
 } from '@abgov/angular-components';
-import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail, GoabInputOnKeyPressDetail } from '@abgov/ui-components-common';
+import {
+  GoabInputOnChangeDetail,
+  GoabInputOnFocusDetail,
+  GoabInputOnBlurDetail,
+  GoabInputOnKeyPressDetail,
+} from '@abgov/ui-components-common';
 
 @Component({
   selector: 'app-input-examples',
@@ -28,12 +39,15 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
     GoabButtonGroup,
     GoabBlock,
     GoabCard,
-    GoabFormItem
+    GoabFormItem,
   ],
   template: `
     <goab-container>
       <h1>Input Component Examples</h1>
-      <p>Allow users to enter and edit text with various input types and validation.</p>
+      <p>
+        Allow users to enter and edit text with various input types and
+        validation.
+      </p>
 
       <goab-spacer vSpacing="xl"></goab-spacer>
 
@@ -49,7 +63,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             name="basic-default"
             placeholder="Enter text here"
             width="20rem"
-            (onChange)="onBasicChange('default', $event)">
+            (onChange)="onBasicChange('default', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -58,7 +73,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             name="basic-with-value"
             [value]="'Sample text'"
             width="20rem"
-            (onChange)="onBasicChange('withValue', $event)">
+            (onChange)="onBasicChange('withValue', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -67,7 +83,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             name="basic-disabled"
             [value]="'Cannot edit this'"
             [disabled]="true"
-            width="20rem">
+            width="20rem"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -76,16 +93,21 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             name="basic-readonly"
             [value]="'Read-only text'"
             [readonly]="true"
-            width="20rem">
+            width="20rem"
+          >
           </goab-input>
         </goab-form-item>
 
-        <goab-form-item label="Input with Error" error="Please enter a valid value">
+        <goab-form-item
+          label="Input with Error"
+          error="Please enter a valid value"
+        >
           <goab-input
             name="basic-error"
             [error]="true"
             width="20rem"
-            (onChange)="onBasicChange('error', $event)">
+            (onChange)="onBasicChange('error', $event)"
+          >
           </goab-input>
         </goab-form-item>
       </goab-block>
@@ -110,7 +132,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             type="text"
             placeholder="Enter text"
             width="20rem"
-            (onChange)="onTypeChange('text', $event)">
+            (onChange)="onTypeChange('text', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -120,7 +143,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             type="email"
             placeholder="Enter email address"
             width="20rem"
-            (onChange)="onTypeChange('email', $event)">
+            (onChange)="onTypeChange('email', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -130,7 +154,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             type="password"
             placeholder="Enter password"
             width="20rem"
-            (onChange)="onTypeChange('password', $event)">
+            (onChange)="onTypeChange('password', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -140,7 +165,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             type="tel"
             placeholder="(555) 123-4567"
             width="20rem"
-            (onChange)="onTypeChange('tel', $event)">
+            (onChange)="onTypeChange('tel', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -150,7 +176,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             type="url"
             placeholder="https://example.com"
             width="20rem"
-            (onChange)="onTypeChange('url', $event)">
+            (onChange)="onTypeChange('url', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -163,7 +190,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             [max]="100"
             [step]="1"
             width="20rem"
-            (onChange)="onTypeChange('number', $event)">
+            (onChange)="onTypeChange('number', $event)"
+          >
           </goab-input>
         </goab-form-item>
       </goab-block>
@@ -188,7 +216,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             placeholder="Search..."
             leadingIcon="search"
             width="20rem"
-            (onChange)="onFeatureChange('leadingIcon', $event)">
+            (onChange)="onFeatureChange('leadingIcon', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -200,7 +229,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             trailingIcon="eye"
             width="20rem"
             (onChange)="onFeatureChange('trailingIcon', $event)"
-            (onTrailingIconClick)="togglePasswordVisibility()">
+            (onTrailingIconClick)="togglePasswordVisibility()"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -208,11 +238,12 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
           <goab-input
             name="with-prefix"
             placeholder="0.00"
-            prefix="$"
+            leadingContent="$"
             type="number"
             textAlign="right"
             width="20rem"
-            (onChange)="onFeatureChange('prefix', $event)">
+            (onChange)="onFeatureChange('prefix', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -220,10 +251,11 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
           <goab-input
             name="with-suffix"
             placeholder="Enter weight"
-            suffix="kg"
+            trailingContent="kg"
             type="number"
             width="20rem"
-            (onChange)="onFeatureChange('suffix', $event)">
+            (onChange)="onFeatureChange('suffix', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -233,7 +265,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             placeholder="Max 10 characters"
             [maxLength]="10"
             width="20rem"
-            (onChange)="onFeatureChange('maxLength', $event)">
+            (onChange)="onFeatureChange('maxLength', $event)"
+          >
           </goab-input>
         </goab-form-item>
       </goab-block>
@@ -254,36 +287,41 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
       <h3>User Registration Form</h3>
       <form [formGroup]="registrationForm">
         <goab-block direction="column" gap="l">
-          <goab-form-item 
-            label="First Name" 
+          <goab-form-item
+            label="First Name"
             [error]="getFieldError('firstName')"
-            helpText="Enter your first name">
+            helpText="Enter your first name"
+          >
             <goab-input
               name="firstName"
               formControlName="firstName"
               placeholder="First name"
               [error]="isFieldInvalid('firstName')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Last Name" 
+          <goab-form-item
+            label="Last Name"
             [error]="getFieldError('lastName')"
-            helpText="Enter your last name">
+            helpText="Enter your last name"
+          >
             <goab-input
               name="lastName"
               formControlName="lastName"
               placeholder="Last name"
               [error]="isFieldInvalid('lastName')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Email Address" 
+          <goab-form-item
+            label="Email Address"
             [error]="getFieldError('email')"
-            helpText="Enter a valid email address">
+            helpText="Enter a valid email address"
+          >
             <goab-input
               name="email"
               formControlName="email"
@@ -291,14 +329,16 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               placeholder="email@example.com"
               leadingIcon="mail"
               [error]="isFieldInvalid('email')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Phone Number" 
+          <goab-form-item
+            label="Phone Number"
             [error]="getFieldError('phone')"
-            helpText="Enter your phone number">
+            helpText="Enter your phone number"
+          >
             <goab-input
               name="phone"
               formControlName="phone"
@@ -306,14 +346,16 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               placeholder="(555) 123-4567"
               leadingIcon="call"
               [error]="isFieldInvalid('phone')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Age" 
+          <goab-form-item
+            label="Age"
             [error]="getFieldError('age')"
-            helpText="Enter your age (18-120)">
+            helpText="Enter your age (18-120)"
+          >
             <goab-input
               name="age"
               formControlName="age"
@@ -321,9 +363,10 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               placeholder="Age"
               [min]="18"
               [max]="120"
-              suffix="years"
+              trailingContent="years"
               [error]="isFieldInvalid('age')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
         </goab-block>
@@ -331,10 +374,11 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
         <goab-spacer vSpacing="m"></goab-spacer>
 
         <goab-button-group alignment="start" gap="compact">
-          <goab-button 
-            type="primary" 
+          <goab-button
+            type="primary"
             (onClick)="onRegistrationSubmit()"
-            [disabled]="registrationForm.invalid">
+            [disabled]="registrationForm.invalid"
+          >
             Register
           </goab-button>
           <goab-button type="secondary" (onClick)="resetRegistrationForm()">
@@ -367,7 +411,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               [(ngModel)]="templateData.companyName"
               placeholder="Enter company name"
               width="20rem"
-              (onChange)="onTemplateChange('companyName', $event)">
+              (onChange)="onTemplateChange('companyName', $event)"
+            >
             </goab-input>
           </goab-form-item>
 
@@ -377,7 +422,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               [(ngModel)]="templateData.contactPerson"
               placeholder="Enter contact person name"
               width="20rem"
-              (onChange)="onTemplateChange('contactPerson', $event)">
+              (onChange)="onTemplateChange('contactPerson', $event)"
+            >
             </goab-input>
           </goab-form-item>
 
@@ -389,7 +435,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               placeholder="business@company.com"
               leadingIcon="mail"
               width="20rem"
-              (onChange)="onTemplateChange('businessEmail', $event)">
+              (onChange)="onTemplateChange('businessEmail', $event)"
+            >
             </goab-input>
           </goab-form-item>
 
@@ -399,9 +446,10 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               [(ngModel)]="templateData.website"
               type="url"
               placeholder="https://company.com"
-              prefix="https://"
+              leadingContent="https://"
               width="20rem"
-              (onChange)="onTemplateChange('website', $event)">
+              (onChange)="onTemplateChange('website', $event)"
+            >
             </goab-input>
           </goab-form-item>
         </goab-block>
@@ -431,9 +479,14 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
       <h3>Template Form with Validation</h3>
       <form #validationTemplateForm="ngForm">
         <goab-block direction="column" gap="l">
-          <goab-form-item 
-            label="Username" 
-            [error]="usernameField.invalid && usernameField.touched ? 'Username is required (min 3 characters)' : undefined">
+          <goab-form-item
+            label="Username"
+            [error]="
+              usernameField.invalid && usernameField.touched
+                ? 'Username is required (min 3 characters)'
+                : undefined
+            "
+          >
             <goab-input
               name="username"
               [(ngModel)]="templateValidationData.username"
@@ -443,13 +496,19 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               minlength="3"
               #usernameField="ngModel"
               [error]="usernameField.invalid && usernameField.touched"
-              (onChange)="onTemplateValidationChange('username', $event)">
+              (onChange)="onTemplateValidationChange('username', $event)"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Email Address" 
-            [error]="emailField.invalid && emailField.touched ? 'Please enter a valid email address' : undefined">
+          <goab-form-item
+            label="Email Address"
+            [error]="
+              emailField.invalid && emailField.touched
+                ? 'Please enter a valid email address'
+                : undefined
+            "
+          >
             <goab-input
               name="email"
               [(ngModel)]="templateValidationData.email"
@@ -461,7 +520,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               email
               #emailField="ngModel"
               [error]="emailField.invalid && emailField.touched"
-              (onChange)="onTemplateValidationChange('email', $event)">
+              (onChange)="onTemplateValidationChange('email', $event)"
+            >
             </goab-input>
           </goab-form-item>
         </goab-block>
@@ -469,13 +529,17 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
         <goab-spacer vSpacing="m"></goab-spacer>
 
         <goab-button-group alignment="start" gap="compact">
-          <goab-button 
-            type="primary" 
+          <goab-button
+            type="primary"
             (onClick)="onTemplateValidationSubmit()"
-            [disabled]="!validationTemplateForm.valid">
+            [disabled]="!validationTemplateForm.valid"
+          >
             Create Account
           </goab-button>
-          <goab-button type="secondary" (onClick)="resetTemplateValidationForm()">
+          <goab-button
+            type="secondary"
+            (onClick)="resetTemplateValidationForm()"
+          >
             Reset
           </goab-button>
         </goab-button-group>
@@ -501,29 +565,32 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
       <h3>Financial Information Form</h3>
       <form [formGroup]="financialForm">
         <goab-block direction="column" gap="l">
-          <goab-form-item 
-            label="Annual Salary" 
+          <goab-form-item
+            label="Annual Salary"
             [error]="getFieldError('salary')"
-            helpText="Enter your annual salary">
+            helpText="Enter your annual salary"
+          >
             <goab-input
               name="salary"
               formControlName="salary"
               type="number"
               placeholder="0"
-              prefix="$"
-              suffix="CAD"
+              leadingContent="$"
+              trailingContent="CAD"
               textAlign="right"
               [min]="0"
               [max]="1000000"
               [error]="isFieldInvalid('salary')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Social Insurance Number" 
+          <goab-form-item
+            label="Social Insurance Number"
             [error]="getFieldError('sin')"
-            helpText="Enter your 9-digit SIN (xxx-xxx-xxx)">
+            helpText="Enter your 9-digit SIN (xxx-xxx-xxx)"
+          >
             <goab-input
               name="sin"
               formControlName="sin"
@@ -531,14 +598,16 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               [maxLength]="11"
               [error]="isFieldInvalid('sin')"
               width="20rem"
-              (onChange)="formatSIN($event)">
+              (onChange)="formatSIN($event)"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Bank Account Number" 
+          <goab-form-item
+            label="Bank Account Number"
             [error]="getFieldError('accountNumber')"
-            helpText="Enter your bank account number">
+            helpText="Enter your bank account number"
+          >
             <goab-input
               name="accountNumber"
               formControlName="accountNumber"
@@ -546,7 +615,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               placeholder="Account number"
               leadingIcon="card"
               [error]="isFieldInvalid('accountNumber')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
         </goab-block>
@@ -554,10 +624,11 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
         <goab-spacer vSpacing="m"></goab-spacer>
 
         <goab-button-group alignment="start" gap="compact">
-          <goab-button 
-            type="primary" 
+          <goab-button
+            type="primary"
             (onClick)="onFinancialFormSubmit()"
-            [disabled]="financialForm.invalid">
+            [disabled]="financialForm.invalid"
+          >
             Save Financial Info
           </goab-button>
           <goab-button type="secondary" (onClick)="resetFinancialForm()">
@@ -569,9 +640,17 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
 
         <goab-card>
           <h4>Financial Form Status:</h4>
-          <p><strong>Salary Valid:</strong> {{ financialForm.get('salary')?.valid }}</p>
-          <p><strong>SIN Valid:</strong> {{ financialForm.get('sin')?.valid }}</p>
-          <p><strong>Account Valid:</strong> {{ financialForm.get('accountNumber')?.valid }}</p>
+          <p>
+            <strong>Salary Valid:</strong>
+            {{ financialForm.get('salary')?.valid }}
+          </p>
+          <p>
+            <strong>SIN Valid:</strong> {{ financialForm.get('sin')?.valid }}
+          </p>
+          <p>
+            <strong>Account Valid:</strong>
+            {{ financialForm.get('accountNumber')?.valid }}
+          </p>
           <p><strong>Form Valid:</strong> {{ financialForm.valid }}</p>
           <pre>{{ financialForm.value | json }}</pre>
         </goab-card>
@@ -582,37 +661,42 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
       <h3>Address Information Form</h3>
       <form [formGroup]="addressForm">
         <goab-block direction="column" gap="l">
-          <goab-form-item 
-            label="Street Address" 
+          <goab-form-item
+            label="Street Address"
             [error]="getAddressFieldError('streetAddress')"
-            helpText="Enter your street address">
+            helpText="Enter your street address"
+          >
             <goab-input
               name="streetAddress"
               formControlName="streetAddress"
               placeholder="123 Main Street"
               leadingIcon="pin"
               [error]="isAddressFieldInvalid('streetAddress')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="City" 
+          <goab-form-item
+            label="City"
             [error]="getAddressFieldError('city')"
-            helpText="Enter your city">
+            helpText="Enter your city"
+          >
             <goab-input
               name="city"
               formControlName="city"
               placeholder="Calgary"
               [error]="isAddressFieldInvalid('city')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Postal Code" 
+          <goab-form-item
+            label="Postal Code"
             [error]="getAddressFieldError('postalCode')"
-            helpText="Enter Canadian postal code (A1A 1A1)">
+            helpText="Enter Canadian postal code (A1A 1A1)"
+          >
             <goab-input
               name="postalCode"
               formControlName="postalCode"
@@ -620,7 +704,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               [maxLength]="7"
               [error]="isAddressFieldInvalid('postalCode')"
               width="20rem"
-              (onChange)="formatPostalCode($event)">
+              (onChange)="formatPostalCode($event)"
+            >
             </goab-input>
           </goab-form-item>
         </goab-block>
@@ -628,10 +713,11 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
         <goab-spacer vSpacing="m"></goab-spacer>
 
         <goab-button-group alignment="start" gap="compact">
-          <goab-button 
-            type="primary" 
+          <goab-button
+            type="primary"
             (onClick)="onAddressFormSubmit()"
-            [disabled]="addressForm.invalid">
+            [disabled]="addressForm.invalid"
+          >
             Save Address
           </goab-button>
           <goab-button type="secondary" (onClick)="resetAddressForm()">
@@ -666,7 +752,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             (onChange)="onEventTestChange($event)"
             (onFocus)="onEventTestFocus($event)"
             (onBlur)="onEventTestBlur($event)"
-            (onKeyPress)="onEventTestKeyPress($event)">
+            (onKeyPress)="onEventTestKeyPress($event)"
+          >
           </goab-input>
         </goab-form-item>
       </goab-block>
@@ -689,7 +776,9 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
       <goab-card>
         <h4>Event Log:</h4>
         <p><strong>Current Value:</strong> "{{ eventTestValue }}"</p>
-        <p><strong>Character Count:</strong> {{ eventTestValue?.length || 0 }}</p>
+        <p>
+          <strong>Character Count:</strong> {{ eventTestValue?.length || 0 }}
+        </p>
         <p><strong>Last Event:</strong> {{ lastEvent }}</p>
         <div style="max-height: 200px; overflow-y: auto;">
           <pre>{{ eventLog.slice(-10).join('\\n') }}</pre>
@@ -726,7 +815,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             [readonly]="dynamicProperties.readonly1"
             [maxLength]="dynamicProperties.maxLength1"
             width="20rem"
-            (onChange)="onDynamicChange('input1', $event)">
+            (onChange)="onDynamicChange('input1', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -737,7 +827,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             [placeholder]="dynamicProperties.placeholder2"
             leadingIcon="search"
             width="20rem"
-            (onChange)="onDynamicChange('input2', $event)">
+            (onChange)="onDynamicChange('input2', $event)"
+          >
           </goab-input>
         </goab-form-item>
 
@@ -749,14 +840,17 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
             [prefix]="dynamicProperties.prefix3"
             [suffix]="dynamicProperties.suffix3"
             width="20rem"
-            (onChange)="onDynamicChange('input3', $event)">
+            (onChange)="onDynamicChange('input3', $event)"
+          >
           </goab-input>
         </goab-form-item>
       </goab-block>
 
       <goab-card>
         <h4>Dynamic Controls State:</h4>
-        <p><strong>Properties Changed:</strong> {{ propertiesChanged }} times</p>
+        <p>
+          <strong>Properties Changed:</strong> {{ propertiesChanged }} times
+        </p>
         <pre>{{ dynamicData | json }}</pre>
         <h5>Current Properties:</h5>
         <pre>{{ dynamicProperties | json }}</pre>
@@ -772,55 +866,62 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
       <h3>Government Service Application</h3>
       <form [formGroup]="serviceForm">
         <goab-block direction="column" gap="l">
-          <goab-form-item 
-            label="Application ID" 
+          <goab-form-item
+            label="Application ID"
             [error]="getServiceFieldError('applicationId')"
-            helpText="Enter your application reference number">
+            helpText="Enter your application reference number"
+          >
             <goab-input
               name="applicationId"
               formControlName="applicationId"
               placeholder="APP-2025-001234"
               [maxLength]="15"
               [error]="isServiceFieldInvalid('applicationId')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Applicant Name" 
+          <goab-form-item
+            label="Applicant Name"
             [error]="getServiceFieldError('applicantName')"
-            helpText="Enter full legal name">
+            helpText="Enter full legal name"
+          >
             <goab-input
               name="applicantName"
               formControlName="applicantName"
               placeholder="Full legal name"
               [error]="isServiceFieldInvalid('applicantName')"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Service Fee" 
+          <goab-form-item
+            label="Service Fee"
             [error]="getServiceFieldError('serviceFee')"
-            helpText="Service processing fee">
+            helpText="Service processing fee"
+          >
             <goab-input
               name="serviceFee"
               formControlName="serviceFee"
               type="number"
-              prefix="$"
-              suffix="CAD"
+              leadingContent="$"
+              trailingContent="CAD"
               textAlign="right"
               [min]="0"
               [readonly]="true"
               [value]="calculateServiceFee()"
-              width="20rem">
+              width="20rem"
+            >
             </goab-input>
           </goab-form-item>
 
-          <goab-form-item 
-            label="Contact Phone" 
+          <goab-form-item
+            label="Contact Phone"
             [error]="getServiceFieldError('contactPhone')"
-            helpText="Primary contact number">
+            helpText="Primary contact number"
+          >
             <goab-input
               name="contactPhone"
               formControlName="contactPhone"
@@ -829,7 +930,8 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
               leadingIcon="call"
               [error]="isServiceFieldInvalid('contactPhone')"
               width="20rem"
-              (onChange)="formatPhoneNumber($event)">
+              (onChange)="formatPhoneNumber($event)"
+            >
             </goab-input>
           </goab-form-item>
         </goab-block>
@@ -837,10 +939,11 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
         <goab-spacer vSpacing="m"></goab-spacer>
 
         <goab-button-group alignment="start" gap="compact">
-          <goab-button 
-            type="primary" 
+          <goab-button
+            type="primary"
             (onClick)="onServiceFormSubmit()"
-            [disabled]="serviceForm.invalid">
+            [disabled]="serviceForm.invalid"
+          >
             Submit Application
           </goab-button>
           <goab-button type="secondary" (onClick)="resetServiceForm()">
@@ -852,11 +955,23 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
 
         <goab-card>
           <h4>Service Application Status:</h4>
-          <p><strong>Application ID Valid:</strong> {{ serviceForm.get('applicationId')?.valid }}</p>
-          <p><strong>Applicant Name Valid:</strong> {{ serviceForm.get('applicantName')?.valid }}</p>
-          <p><strong>Contact Phone Valid:</strong> {{ serviceForm.get('contactPhone')?.valid }}</p>
+          <p>
+            <strong>Application ID Valid:</strong>
+            {{ serviceForm.get('applicationId')?.valid }}
+          </p>
+          <p>
+            <strong>Applicant Name Valid:</strong>
+            {{ serviceForm.get('applicantName')?.valid }}
+          </p>
+          <p>
+            <strong>Contact Phone Valid:</strong>
+            {{ serviceForm.get('contactPhone')?.valid }}
+          </p>
           <p><strong>Form Valid:</strong> {{ serviceForm.valid }}</p>
-          <p><strong>Calculated Fee:</strong> {{ '$' + (calculateServiceFee() | number:'1.2-2') + ' CAD' }}</p>
+          <p>
+            <strong>Calculated Fee:</strong>
+            {{ '$' + (calculateServiceFee() | number: '1.2-2') + ' CAD' }}
+          </p>
           <pre>{{ serviceForm.value | json }}</pre>
         </goab-card>
       </form>
@@ -865,20 +980,61 @@ import { GoabInputOnChangeDetail, GoabInputOnFocusDetail, GoabInputOnBlurDetail,
 
       <h2>Usage Notes</h2>
       <ul>
-        <li><strong>Types:</strong> Use appropriate input types: <code>text</code>, <code>email</code>, <code>password</code>, <code>tel</code>, <code>url</code>, <code>number</code></li>
-        <li><strong>Reactive Forms:</strong> Use formControlName for reactive forms and FormControl</li>
-        <li><strong>Template Forms:</strong> Use [(ngModel)] and (onChange) for template-driven forms</li>
-        <li><strong>Validation:</strong> Apply validators to FormControl or use validation attributes in templates</li>
-        <li><strong>Icons:</strong> Use leadingIcon and trailingIcon to add visual context</li>
-        <li><strong>Formatting:</strong> Use prefix and suffix for currency, units, or context</li>
-        <li><strong>Alignment:</strong> Use textAlign="right" for numerical inputs</li>
-        <li><strong>Constraints:</strong> Set min, max, maxLength, and step for validation</li>
-        <li><strong>States:</strong> Use disabled, readonly, and error for different states</li>
-        <li><strong>Events:</strong> Listen to (onChange), (onFocus), (onBlur), (onKeyPress)</li>
-        <li><strong>Width:</strong> Set appropriate width using the width property</li>
-        <li><strong>Accessibility:</strong> Use ariaLabel and ariaLabelledBy for screen readers</li>
-        <li><strong>Auto-completion:</strong> Use autoComplete to help users fill forms faster</li>
-        <li><strong>Security:</strong> Never store sensitive data in component state or logs</li>
+        <li>
+          <strong>Types:</strong> Use appropriate input types:
+          <code>text</code>, <code>email</code>, <code>password</code>,
+          <code>tel</code>, <code>url</code>, <code>number</code>
+        </li>
+        <li>
+          <strong>Reactive Forms:</strong> Use formControlName for reactive
+          forms and FormControl
+        </li>
+        <li>
+          <strong>Template Forms:</strong> Use [(ngModel)] and (onChange) for
+          template-driven forms
+        </li>
+        <li>
+          <strong>Validation:</strong> Apply validators to FormControl or use
+          validation attributes in templates
+        </li>
+        <li>
+          <strong>Icons:</strong> Use leadingIcon and trailingIcon to add visual
+          context
+        </li>
+        <li>
+          <strong>Formatting:</strong> Use prefix and suffix for currency,
+          units, or context
+        </li>
+        <li>
+          <strong>Alignment:</strong> Use textAlign="right" for numerical inputs
+        </li>
+        <li>
+          <strong>Constraints:</strong> Set min, max, maxLength, and step for
+          validation
+        </li>
+        <li>
+          <strong>States:</strong> Use disabled, readonly, and error for
+          different states
+        </li>
+        <li>
+          <strong>Events:</strong> Listen to (onChange), (onFocus), (onBlur),
+          (onKeyPress)
+        </li>
+        <li>
+          <strong>Width:</strong> Set appropriate width using the width property
+        </li>
+        <li>
+          <strong>Accessibility:</strong> Use ariaLabel and ariaLabelledBy for
+          screen readers
+        </li>
+        <li>
+          <strong>Auto-completion:</strong> Use autoComplete to help users fill
+          forms faster
+        </li>
+        <li>
+          <strong>Security:</strong> Never store sensitive data in component
+          state or logs
+        </li>
       </ul>
     </goab-container>
   `,
@@ -894,7 +1050,7 @@ export class InputExamplesComponent implements OnInit {
   basicState = {
     default: '',
     withValue: 'Sample text',
-    error: ''
+    error: '',
   };
 
   typeState = {
@@ -903,7 +1059,7 @@ export class InputExamplesComponent implements OnInit {
     password: '',
     tel: '',
     url: '',
-    number: null
+    number: null,
   };
 
   featureState = {
@@ -911,7 +1067,7 @@ export class InputExamplesComponent implements OnInit {
     trailingIcon: '',
     prefix: null,
     suffix: null,
-    maxLength: ''
+    maxLength: '',
   };
 
   // Template-driven form data
@@ -919,12 +1075,12 @@ export class InputExamplesComponent implements OnInit {
     companyName: '',
     contactPerson: '',
     businessEmail: '',
-    website: ''
+    website: '',
   };
 
   templateValidationData = {
     username: '',
-    email: ''
+    email: '',
   };
 
   // Interactive data
@@ -936,7 +1092,7 @@ export class InputExamplesComponent implements OnInit {
   dynamicData = {
     input1: '',
     input2: '',
-    input3: ''
+    input3: '',
   };
 
   dynamicProperties = {
@@ -949,7 +1105,7 @@ export class InputExamplesComponent implements OnInit {
     trailingIcon2: undefined as string | undefined,
     type3: 'text',
     prefix3: '',
-    suffix3: ''
+    suffix3: '',
   };
 
   propertiesChanged = 0;
@@ -959,27 +1115,45 @@ export class InputExamplesComponent implements OnInit {
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern(/^\(\d{3}\) \d{3}-\d{4}$/)]],
-      age: [null, [Validators.required, Validators.min(18), Validators.max(120)]]
+      phone: [
+        '',
+        [Validators.required, Validators.pattern(/^\(\d{3}\) \d{3}-\d{4}$/)],
+      ],
+      age: [
+        null,
+        [Validators.required, Validators.min(18), Validators.max(120)],
+      ],
     });
 
     this.financialForm = this.fb.group({
       salary: [null, [Validators.required, Validators.min(0)]],
-      sin: ['', [Validators.required, Validators.pattern(/^\d{3}-\d{3}-\d{3}$/)]],
-      accountNumber: ['', [Validators.required, Validators.minLength(5)]]
+      sin: [
+        '',
+        [Validators.required, Validators.pattern(/^\d{3}-\d{3}-\d{3}$/)],
+      ],
+      accountNumber: ['', [Validators.required, Validators.minLength(5)]],
     });
 
     this.addressForm = this.fb.group({
       streetAddress: ['', [Validators.required, Validators.minLength(5)]],
       city: ['', [Validators.required, Validators.minLength(2)]],
-      postalCode: ['', [Validators.required, Validators.pattern(/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/)]]
+      postalCode: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(/^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/),
+        ],
+      ],
     });
 
     this.serviceForm = this.fb.group({
-      applicationId: ['', [Validators.required, Validators.pattern(/^APP-\d{4}-\d{6}$/)]],
+      applicationId: [
+        '',
+        [Validators.required, Validators.pattern(/^APP-\d{4}-\d{6}$/)],
+      ],
       applicantName: ['', [Validators.required, Validators.minLength(3)]],
       serviceFee: [{ value: this.calculateServiceFee(), disabled: true }],
-      contactPhone: ['', [Validators.required]]
+      contactPhone: ['', [Validators.required]],
     });
   }
 
@@ -1008,7 +1182,9 @@ export class InputExamplesComponent implements OnInit {
 
   togglePasswordVisibility() {
     this.passwordVisible = !this.passwordVisible;
-    this.logEvent(`Password visibility: ${this.passwordVisible ? 'visible' : 'hidden'}`);
+    this.logEvent(
+      `Password visibility: ${this.passwordVisible ? 'visible' : 'hidden'}`,
+    );
   }
 
   // Reactive form methods
@@ -1090,7 +1266,7 @@ export class InputExamplesComponent implements OnInit {
       companyName: '',
       contactPerson: '',
       businessEmail: '',
-      website: ''
+      website: '',
     };
     this.logEvent('Contact form reset');
   }
@@ -1109,7 +1285,7 @@ export class InputExamplesComponent implements OnInit {
   resetTemplateValidationForm() {
     this.templateValidationData = {
       username: '',
-      email: ''
+      email: '',
     };
     this.logEvent('Template validation form reset');
   }
@@ -1164,16 +1340,22 @@ export class InputExamplesComponent implements OnInit {
 
   toggleInputProperties() {
     this.dynamicProperties = {
-      placeholder1: this.dynamicProperties.placeholder1 === 'Type here...' ? 'Enter data...' : 'Type here...',
+      placeholder1:
+        this.dynamicProperties.placeholder1 === 'Type here...'
+          ? 'Enter data...'
+          : 'Type here...',
       disabled1: !this.dynamicProperties.disabled1,
       readonly1: !this.dynamicProperties.readonly1,
       maxLength1: this.dynamicProperties.maxLength1 === 50 ? 20 : 50,
-      placeholder2: this.dynamicProperties.placeholder2 === 'Search...' ? 'Find...' : 'Search...',
+      placeholder2:
+        this.dynamicProperties.placeholder2 === 'Search...'
+          ? 'Find...'
+          : 'Search...',
       leadingIcon2: 'search',
       trailingIcon2: undefined as string | undefined,
       type3: 'text',
       prefix3: this.dynamicProperties.prefix3 === '' ? '$' : '',
-      suffix3: this.dynamicProperties.suffix3 === '' ? 'CAD' : ''
+      suffix3: this.dynamicProperties.suffix3 === '' ? 'CAD' : '',
     };
     this.propertiesChanged++;
     this.logEvent('Input properties toggled');
@@ -1184,7 +1366,10 @@ export class InputExamplesComponent implements OnInit {
     this.dynamicData = {
       input1: samples[Math.floor(Math.random() * samples.length)],
       input2: samples[Math.floor(Math.random() * samples.length)],
-      input3: Math.random() > 0.5 ? Math.floor(Math.random() * 1000).toString() : samples[Math.floor(Math.random() * samples.length)]
+      input3:
+        Math.random() > 0.5
+          ? Math.floor(Math.random() * 1000).toString()
+          : samples[Math.floor(Math.random() * samples.length)],
     };
     this.logEvent('Input values randomized');
   }
@@ -1205,7 +1390,7 @@ export class InputExamplesComponent implements OnInit {
       trailingIcon2: undefined,
       type3: 'text',
       prefix3: '',
-      suffix3: ''
+      suffix3: '',
     };
     this.dynamicData = { input1: '', input2: '', input3: '' };
     this.propertiesChanged = 0;
@@ -1225,7 +1410,10 @@ export class InputExamplesComponent implements OnInit {
     const value = event.value?.toUpperCase().replace(/[^A-Z0-9]/g, '') || '';
     if (value.length <= 6) {
       const formatted = value.replace(/([A-Z]\d[A-Z])(\d[A-Z]\d)/, '$1 $2');
-      this.addressForm.patchValue({ postalCode: formatted }, { emitEvent: false });
+      this.addressForm.patchValue(
+        { postalCode: formatted },
+        { emitEvent: false },
+      );
     }
   }
 
@@ -1233,29 +1421,37 @@ export class InputExamplesComponent implements OnInit {
     const value = event.value?.replace(/\D/g, '') || '';
     if (value.length <= 10) {
       const formatted = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
-      this.serviceForm.patchValue({ contactPhone: formatted }, { emitEvent: false });
+      this.serviceForm.patchValue(
+        { contactPhone: formatted },
+        { emitEvent: false },
+      );
     }
   }
 
   calculateServiceFee(): number {
-    return 25.00; // Fixed government service fee
+    return 25.0; // Fixed government service fee
   }
 
   // Utility methods
   isFieldInvalid(fieldName: string): boolean {
-    const field = this.registrationForm.get(fieldName) || this.financialForm.get(fieldName);
+    const field =
+      this.registrationForm.get(fieldName) || this.financialForm.get(fieldName);
     return !!(field && field.invalid && field.touched);
   }
 
   getFieldError(fieldName: string): string | undefined {
-    const field = this.registrationForm.get(fieldName) || this.financialForm.get(fieldName);
+    const field =
+      this.registrationForm.get(fieldName) || this.financialForm.get(fieldName);
     if (field && field.invalid && field.touched) {
       if (field.errors?.['required']) return 'This field is required';
       if (field.errors?.['email']) return 'Please enter a valid email address';
-      if (field.errors?.['minlength']) return `Minimum ${field.errors['minlength'].requiredLength} characters required`;
+      if (field.errors?.['minlength'])
+        return `Minimum ${field.errors['minlength'].requiredLength} characters required`;
       if (field.errors?.['pattern']) return 'Please enter a valid format';
-      if (field.errors?.['min']) return `Minimum value is ${field.errors['min'].min}`;
-      if (field.errors?.['max']) return `Maximum value is ${field.errors['max'].max}`;
+      if (field.errors?.['min'])
+        return `Minimum value is ${field.errors['min'].min}`;
+      if (field.errors?.['max'])
+        return `Maximum value is ${field.errors['max'].max}`;
     }
     return undefined;
   }
@@ -1269,8 +1465,10 @@ export class InputExamplesComponent implements OnInit {
     const field = this.addressForm.get(fieldName);
     if (field && field.invalid && field.touched) {
       if (field.errors?.['required']) return 'This field is required';
-      if (field.errors?.['minlength']) return `Minimum ${field.errors['minlength'].requiredLength} characters required`;
-      if (field.errors?.['pattern']) return 'Please enter a valid postal code (A1A 1A1)';
+      if (field.errors?.['minlength'])
+        return `Minimum ${field.errors['minlength'].requiredLength} characters required`;
+      if (field.errors?.['pattern'])
+        return 'Please enter a valid postal code (A1A 1A1)';
     }
     return undefined;
   }
@@ -1288,13 +1486,14 @@ export class InputExamplesComponent implements OnInit {
         if (fieldName === 'applicationId') return 'Format: APP-YYYY-XXXXXX';
         return 'Please enter a valid format';
       }
-      if (field.errors?.['minlength']) return `Minimum ${field.errors['minlength'].requiredLength} characters required`;
+      if (field.errors?.['minlength'])
+        return `Minimum ${field.errors['minlength'].requiredLength} characters required`;
     }
     return undefined;
   }
 
   private markFormGroupTouched(formGroup: FormGroup) {
-    Object.keys(formGroup.controls).forEach(field => {
+    Object.keys(formGroup.controls).forEach((field) => {
       const control = formGroup.get(field);
       control?.markAsTouched({ onlySelf: true });
     });
